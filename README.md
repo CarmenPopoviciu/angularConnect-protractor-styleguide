@@ -5,6 +5,8 @@ about our [Protractor Styleguide](https://github.com/CarmenPopoviciu/protractor-
 
 ## Run slides
 
+Clone the repository and run
+
 ```
 npm install
 grunt server
