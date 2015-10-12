@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello ng-world!</title>
+
+
+        <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="node_modules/reveal.js/css/theme/simple.css">
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+
+        <link rel="stylesheet" href="styles/general.css">
+    </head>
+
+    <body>
+        <!-- lib scripts -->
+        <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+        <script src="node_modules/reveal.js/js/reveal.js"></script>
+
+
+        <div class="reveal">
+            <div class="slides">
+                <section>Hi there</section>
+            </div>
+        </div>
+
+
+        <!-- reveal.js initialization -->
+        <script>
+            Reveal.initialize({
+                controls: false,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'fade', // none/fade/slide/convex/concave/zoom
+                // Optional reveal.js plugins
+                dependencies: [{
+                    src: 'lib/js/classList.js',
+                    condition: function() { return !document.body.classList; }
+                },{
+                    src: 'node_modules/reveal.js/plugin/highlight/highlight.js',
+                    async: true,
+                    condition: function() { return !!document.querySelector( 'pre code' ); },
+                    callback: function() { hljs.initHighlightingOnLoad(); }
+                }
+                    //{ src: 'plugin/zoom-js/zoom.js', async: true },
+                    //{ src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+        </script>
+    </body>
+</html>
