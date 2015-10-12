@@ -9,7 +9,7 @@
         <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
 
-        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/slides.css">
     </head>
 
     <body>
@@ -20,7 +20,86 @@
 
         <div class="reveal">
             <div class="slides">
-                <section>Hi there</section>
+                <!-- INTRO -->
+                <section>
+                    <div class="title">
+                        <img src="images/protractor-logo.png">
+                        <h1>Protractor styleguide</h1>
+                    </div>
+                    <div class="speaker">
+                        <img class="avatar" src="images/carmen-profile.jpg"> 
+                        <p>@CarmenPopoviciu</p>
+                    </div>
+                    <div class="speaker">
+                        <img class="avatar" src="images/andres-profile.jpg">
+                        <p>@andresdom</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>TODO - some intro -</h2>
+                </section>
+
+
+
+                <!-- E2E GENERICS -->
+                <section>
+                    <h2>E2E Testing</h2>
+                </section>
+
+                <section>
+                    <h2>Why is it important?</h2>
+                    <ul>
+                        <li class="fragment">Tells you that everything is OK</li>
+                        <li class="fragment">Prevents production incidents</li>
+                        <li class="fragment">Checks the app from the user's perspective</li>
+                        <li class="fragment">Manual testing is not a good idea</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>What do we e2e test?</h2>
+                    <ul>
+                        <li class="fragment">Major subpages or routes in the site</li>
+                        <li class="fragment">Main user interaction flows</li>
+                        <li class="fragment">Essential elements on a page</li>
+                    </ul>
+                </section>
+
+
+
+                <!-- RULES -->
+                <section>
+                    <h2>Protractor Styleguide</h2>
+                </section>
+
+                <section>
+                    <h1>Our rules</h1>
+                </section>
+
+                <section>
+                    <h2>#1</h2>
+                    <p class="fragment">WHAT: Don't cheat on your tests</p>
+                    <p class="fragment">WHY: It will bite you in the (‿|‿)</p>
+                </section>
+
+                <section>
+                    <h2>#2</h2>
+                    <p class="fragment">WHAT: Don't e2e test what you can unit test</p>
+                    <p class="fragment">WHY: Unit tests are much faster than e2e tests</p>
+                </section>
+
+                <section>
+                    <h2>#3</h2>
+                    <p class="fragment">WHAT: Don't e2e test what you already unit tested</p>
+                    <p class="fragment">WHY: This one should be pretty obvious ;)</p>
+                </section>
+
+                <section>
+                    <h2>#3</h2>
+                    <p>WHAT: Don't e2e test what you already unit tested</p>
+                    <p>WHY: Avoid duplicate tests</p>
+                </section>
             </div>
         </div>
 

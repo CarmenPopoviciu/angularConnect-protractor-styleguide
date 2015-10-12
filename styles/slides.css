@@ -1,0 +1,46 @@
+.reveal {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.reveal .full-width {
+    width: 100%
+}
+
+.reveal .slides img {
+    border: none;
+    box-shadow: none;
+}
+
+.reveal h1, .reveal h2 {
+    font-family: inherit;
+}
+
+.reveal h2 {
+    color: #B52E31;
+    margin-bottom: 50px;
+}
+
+.reveal .slides .title h1 {
+    font-size: 2.8em;
+    margin-bottom: 140px;
+}
+
+.reveal .slides .title img {
+    width: 4em;
+}
+
+.reveal .slides .speaker {
+    width: 25%;
+    display: inline-block;
+}
+
+.reveal .slides .speaker p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.reveal .slides .avatar {
+    width: 3em;
+    border-radius: 1.5em;
+    margin: 0;
+}
