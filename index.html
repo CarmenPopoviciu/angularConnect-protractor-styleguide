@@ -80,7 +80,7 @@
                 <section>
                     <h2>#1</h2>
                     <p class="fragment">WHAT: Don't cheat on your tests</p>
-                    <p class="fragment">WHY: It will bite you in the (‿|‿)</p>
+                    <p class="fragment">WHY: Tests are there for a reason. You'll only be cheating on yourself.</p>
                 </section>
 
                 <section>
@@ -99,6 +99,178 @@
                     <h2>#3</h2>
                     <p>WHAT: Don't e2e test what you already unit tested</p>
                     <p>WHY: Avoid duplicate tests</p>
+                </section>
+
+                <section>
+                    <h2>#4</h2>
+                    <p>WHAT: Put all e2e test files in one dedicated folder</p>
+                    <p>WHY:
+                        <ul>
+                            <li>Easy to find</li>
+                            <li>Separates them from unit tests</li>
+                            <li>Cleaner folder structure</li>
+                        </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <pre>
+                        <code class="javascript">
+/* avoid */
+
+|-- app
+  |-- home
+      home.module.js
+      home.controller.js
+      home.controller.spec.js
+      home.e2e.spec.js
+      home.page.js
+  |-- profile
+      profile.module.js
+      profile.controller.js
+      profile.directive.js
+      profile.controller.spec.js
+      profile.directive.page.js
+      profile.page.js
+      profile.e2e.spec.js
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <pre>
+                        <code class="javascript">
+/* recommended */
+
+|-- app
+  |-- home
+      home.module.js
+      home.controller.js
+  |-- profile
+      profile.module.js
+      profile.controller.js
+      profile.directive.js
+|-- test
+  |-- unit
+      |-- ...
+  |-- e2e
+    |-- home
+        homePageObject.js
+        home.spec.js
+    |-- profile
+        profilePageObject.js
+        profile.spec.js
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <pre>
+                        <code class="javascript">
+/* recommended */
+
+|-- app
+  |-- home
+      home.module.js
+      home.controller.js
+      home.controller.spec.js
+      |-- e2e
+          homePageObject.js
+          home.spec.js
+  |-- profile
+      profile.module.js
+      profile.controller.js
+      profile.directive.js
+      profile.controller.spec.js
+      profile.directive.spec.js
+      |-- e2e
+          profilePageObject.js
+          profile.spec.js
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h2>#5</h2>
+                    <p>WHAT: Use one configuration file</p>
+                    <p>WHY:
+                        <ul>
+                            <li>Use your build tool to setup different configurations</li>
+                            <li>Avoid duplicate configuration code</li>
+                        </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <pre>
+                        <code class="javascript">
+/* avoid */
+
+protractor.conf.local.js
+protractor.conf.dev.js
+protractor.conf.test.js
+.....
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <pre>
+                        <code class="javascript">
+/* recommended */
+
+/* protractor.conf.js */
+exclude: [],
+multiCapabilities: [{
+    browserName: 'chrome',
+    shardTestFiles: true,
+    maxInstances: 3
+}],
+allScriptsTimeout: 11000,
+getPageTimeout: 10000,
+framework: 'jasmine',
+jasmineNodeOpts: {
+    isVerbose: false,
+    showColors: true,
+    includeStackTrace: false,
+    defaultTimeoutInterval: 40000
+}
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <pre>
+                        <code class="javascript">
+/* recommended */
+
+/* Gruntfile.js */
+// grunt-protractor-coverage config
+e2e.local: {
+    options: {
+        args: {
+            baseUrl: local_base_url,
+            seleniumAddress: local_selenium_address,
+            specs: ['..../**/*.spec.js']
+        }
+    }
+},
+e2e.dev: {
+    options: {
+        args: {
+            baseUrl: dev_base_url,
+            seleniumAddress: dev_selenium_address,
+            specs: ['..../**/*.spec.js']
+        }
+    }
+}
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h2>#6</h2>
+                    <p>WHAT: //locator strategies</p>
                 </section>
             </div>
         </div>

@@ -6,6 +6,14 @@
     width: 100%
 }
 
+.reveal pre {
+    box-shadow: none;
+}
+
+.reveal pre code {
+    max-height: 600px;
+}
+
 .reveal .slides img {
     border: none;
     box-shadow: none;
