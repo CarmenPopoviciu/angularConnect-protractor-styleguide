@@ -72,6 +72,16 @@ var UserPropertiesPage = function() {
 };
 ```
 
+## Page object locators
+
+### Try to avoid text locators for text text that changes frequently
+
+* Try to avoid text-based locators such as `by.linkText`, `by.buttonText`,
+  `by.cssContainingText`.
+
+* Why? Text for buttons, links, and labels tends to change over time. Minor text
+  changes in your application should not break your tests.
+
 # Tests
 
 ### Use Jasmine 2
