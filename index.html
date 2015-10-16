@@ -287,9 +287,9 @@ e2e.dev: {
                     <pre>
                         <code class="html">
 &lt;ul class="red"&gt;
-    &lt;li&gt;{{color.name}}&lt;/li&gt;
-    &lt;li&gt;{{color.shade}}&lt;/li&gt;
-    &lt;li&gt;{{color.code}}&lt;/li&gt;
+  &lt;li&gt;{{color.name}}&lt;/li&gt;
+  &lt;li&gt;{{color.shade}}&lt;/li&gt;
+  &lt;li&gt;{{color.code}}&lt;/li&gt;
 &lt;/ul&gt;
                         </code>
                     </pre>
@@ -306,9 +306,9 @@ var nameElem = element.all(by.css('.red li')).get(0);
                     <pre>
                         <code class="html">
 &lt;ul class="red"&gt;
-    &lt;li&gt;{{color.name}}&lt;/li&gt;
-    &lt;li&gt;{{color.shade}}&lt;/li&gt;
-    &lt;li&gt;{{color.code}}&lt;/li&gt;
+  &lt;li&gt;{{color.name}}&lt;/li&gt;
+  &lt;li&gt;{{color.shade}}&lt;/li&gt;
+  &lt;li&gt;{{color.code}}&lt;/li&gt;
 &lt;/ul&gt;
                         </code>
                     </pre>
@@ -325,9 +325,9 @@ var nameElem = element(by.binding('color.name'));
                     <pre>
                         <code class="html">
 &lt;div class="details"&gt;
-    &lt;div class="personal"&gt;
-        &lt;input ng-model="person.name"&gt;
-    &lt;/div&gt;
+  &lt;div class="personal"&gt;
+    &lt;input ng-model="person.name"&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
                         </code>
                     </pre>
@@ -346,9 +346,9 @@ var nameElem = element.all(by.css('.details'))
                     <pre>
                         <code class="html">
 &lt;div class="details"&gt;
-    &lt;div class="personal"&gt;
-        &lt;input ng-model="person.name"&gt;
-    &lt;/div&gt;
+  &lt;div class="personal"&gt;
+    &lt;input ng-model="person.name"&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
                         </code>
                     </pre>
@@ -436,15 +436,15 @@ var elem = element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[
 /* avoid */
 
 describe('Question page', function() {
-    it('should answer any question', function() {
-        var question = element(by.model('question.text'));
-        var answer = element(by.binding('answer'));
-        var button = element(by.css('.question-button'));
+  it('should answer any question', function() {
+    var question = element(by.model('question.text'));
+    var answer = element(by.binding('answer'));
+    var button = element(by.css('.question-button'));
 
-        question.sendKeys("What is the purpose of meaning?");
-        button.click();
-        expect(answer.getText()).toEqual("Chocolate!");
-    });
+    question.sendKeys("What is the purpose of meaning?");
+    button.click();
+    expect(answer.getText()).toEqual("Chocolate!");
+  });
 });
                         </code>
                     </pre>
@@ -457,14 +457,14 @@ describe('Question page', function() {
 
 /* question.page.js */
 var QuestionPage = function() {
-    this.question = element(by.model('question.text'));
-    this.answer = element(by.binding('answer'));
-    this.button = element(by.className('question-button'));
+  this.question = element(by.model('question.text'));
+  this.answer = element(by.binding('answer'));
+  this.button = element(by.className('question-button'));
 
-    this.ask = function(question) {
-        this.question.sendKeys(question);
-        this.button.click();
-    };
+  this.ask = function(question) {
+    this.question.sendKeys(question);
+    this.button.click();
+  };
 };
 
 module.exports = UserPropertiesPage;
@@ -481,12 +481,12 @@ module.exports = UserPropertiesPage;
 var Question = require('./question.page');
 
 describe('Question page', function() {
-    var question = new Question();
+  var question = new Question();
 
-    it('should ask any question', function() {
+  it('should ask any question', function() {
         question.ask('What is the purpose of meaning?');
         expect(question.answer.getText()).toEqual('Chocolate');
-    });
+  });
 });
                         </code>
                     </pre>
@@ -578,11 +578,11 @@ var MenuPage = require('./menu.page');
 var FooterPage = require('./footer.page');
 
 describe('User properties page', function() {
-    var user = new UserPage();
-    var menu = new MenuPage();
-    var footer = new FooterPage();
+  var user = new UserPage();
+  var menu = new MenuPage();
+  var footer = new FooterPage();
 
-    // specs
+  // specs
 });
                         </code>
                     </pre>
@@ -598,9 +598,9 @@ describe('User properties page', function() {
                     <pre>
                         <code class="html">
 &lt;form&gt;
-    Name: &lt;input type="text" ng-model="ctrl.user.name"&gt;
-    E-mail: &lt;input type="text" ng-model="ctrl.user.email"&gt;
-    &lt;button id="save-button"&gt;Save&lt;/button&gt;
+  Name: &lt;input type="text" ng-model="ctrl.user.name"&gt;
+  E-mail: &lt;input type="text" ng-model="ctrl.user.email"&gt;
+  &lt;button id="save-button"&gt;Save&lt;/button&gt;
 &lt;/form&gt;
                         </code>
                     </pre>
@@ -615,9 +615,9 @@ var email = element(by.model('ctrl.user.email'));
 var saveButton = element(by.id('#save-button'));
 
 var UserPropertiesPage = function() {
-    this.save = function() {
-        ...
-    };
+  this.save = function() {
+    ...
+  };
 };
                         </code>
                     </pre>
@@ -627,9 +627,9 @@ var UserPropertiesPage = function() {
                     <pre>
                         <code class="html">
 &lt;form&gt;
-    Name: &lt;input type="text" ng-model="ctrl.user.name"&gt;
-    E-mail: &lt;input type="text" ng-model="ctrl.user.email"&gt;
-    &lt;button id="save-button"&gt;Save&lt;/button&gt;
+  Name: &lt;input type="text" ng-model="ctrl.user.name"&gt;
+  E-mail: &lt;input type="text" ng-model="ctrl.user.email"&gt;
+  &lt;button id="save-button"&gt;Save&lt;/button&gt;
 &lt;/form&gt;
                         </code>
                     </pre>
@@ -640,13 +640,13 @@ var UserPropertiesPage = function() {
 
 /* user-properties.page.js */
 var UserPropertiesPage = function() {
-    this.name = element(by.model('ctrl.user.name'));
-    this.email = element(by.model('ctrl.user.email'));
-    this.saveButton = element(by.id('#save-button'));
+  this.name = element(by.model('ctrl.user.name'));
+  this.email = element(by.model('ctrl.user.email'));
+  this.saveButton = element(by.id('#save-button'));
 
-    this.save = function() {
-        ...
-    };
+  this.save = function() {
+    ...
+  };
 };
                         </code>
                     </pre>
@@ -671,12 +671,12 @@ var UserPropertiesPage = function() {
 
 /* user-properties.page.js */
 var UserPropertiesPage = function() {
-    this.name = element(by.model('ctrl.user.name'));
-    this.saveButton = element(by.id('#save-button'));
+  this.name = element(by.model('ctrl.user.name'));
+  this.saveButton = element(by.id('save-button'));
 
-    this.enterName = function(name) {
-        this.name.sendKeys(name);
-    };
+  this.enterName = function(name) {
+    this.name.sendKeys(name);
+  };
 };
                         </code>
                     </pre>
@@ -687,12 +687,12 @@ var UserPropertiesPage = function() {
 var UserPage = require('./user-properties.page');
 
 describe('User properties page', function() {
-    var user = new UserPage();
+  var user = new UserPage();
 
-    it('should enable the save button when a user name is entered', function() {
-        user.enterName('TeddyB');
-        expect(user.saveButton.isEnabled()).toBeTruthy();
-    });
+  it('should enable save button when user name entered', function() {
+    user.enterName('TeddyB');
+    expect(user.saveButton.isEnabled()).toBe(true);
+  });
 });
                         </code>
                     </pre>
@@ -705,8 +705,8 @@ describe('User properties page', function() {
 
 /* user-properties.page.js */
 var UserPropertiesPage = function() {
-    this.name = element(by.model('ctrl.user.name'));
-    this.saveButton = element(by.id('#save-button'));
+  this.name = element(by.model('ctrl.user.name'));
+  this.saveButton = element(by.id('save-button'));
 };
                         </code>
                     </pre>
@@ -717,12 +717,12 @@ var UserPropertiesPage = function() {
 var UserPage = require('./user-properties.page');
 
 describe('User properties page', function() {
-    var user = new UserPage();
+  var user = new UserPage();
 
-    it('should enable the save button when a user name is entered', function() {
-        user.name.sendKeys('TeddyB');
-        expect(user.saveButton.isEnabled()).toBeTruthy();
-    });
+  it('should enable save button when user name entered', function() {
+    user.name.sendKeys('TeddyB');
+    expect(user.saveButton.isEnabled()).toBe(true);
+  });
 });
                         </code>
                     </pre>
