@@ -72,7 +72,7 @@
 
               <!--don't cheat-->
               <section>
-                <h3>Don't cheat on your tests</h3>
+                <h2>Don't cheat on your tests</h2>
                 <p class="fragment">WHY: Tests are there for a reason. You'll only be cheating on yourself.</p>
               </section>
 
@@ -98,7 +98,7 @@
               <section>
                 <h3>Put all e2e test files in one dedicated folder</h3>
                 <div class="fragment">
-                  <span>WHY:</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>Easy to find</li>
                     <li>Separates them from unit tests</li>
@@ -186,9 +186,9 @@
 
               <!--use one configuration file-->
               <section>
-                <h3>Use one configuration file</h3>
+                <h2>Use one configuration file</h2>
                 <div class="fragment">
-                  <span>WHY:</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>Use your build tool to setup different configurations</li>
                     <li>Avoid duplicate configuration code</li>
@@ -265,9 +265,9 @@ e2e.dev: {
 
               <!--use protractor locators-->
               <section>
-                <h3>Favor protractor locator strategies when possible</h3>
+                <h3>Favor protractor locators when possible</h3>
                 <div class="fragment">
-                  <span>WHY:</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>Access elements easier</li>
                     <li>Code is less likely to change than other markup</li>
@@ -358,7 +358,7 @@ var elem = element(by.model('person.name'));
               <section>
                 <h3>Favor by.id and by.css when no protractor locators are available</h3>
                 <div class="fragment">
-                  <span>WHY:</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>Access elements easier</li>
                     <li>Select markup that is less likely to change</li>
@@ -371,7 +371,7 @@ var elem = element(by.model('person.name'));
               <section>
                 <h3>NEVER use xpath</h3>
                 <div class="fragment">
-                  <span>WHY:</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>Markup is very easily subject to change</li>
                     <li>Unreadable locator</li>
@@ -392,7 +392,7 @@ var elem = element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[
               <section>
                 <h3>NEVER use xpath</h3>
                 <div class="fragment">
-                  <span>WHY:</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>xpath is known to have performance issues</li>
                     <li>Unreadable locator</li>
@@ -413,7 +413,7 @@ var elem = element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[
               <section>
                 <h3>Use Page Objects to interact with the view under test</h3>
                 <div class="fragment">
-                  <span>WHY:</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>Encapsulate information about the elements on the page under test</li>
                     <li>They can be reused across multiple tests</li>
@@ -493,7 +493,12 @@ describe('Question page', function() {
               <!--single export-->
               <section>
                 <h3>Use a single module.exports at the end of the Page Object file</h3>
-                <p class="fragment">WHY: One Page Object per file means there's only one class to export</p>
+                <div class="fragment">
+                  <p>WHY:</p>
+                  <ul>
+                    <li>One Page Object per file means there's only one class to export</li>
+                  </ul>
+                </div>
               </section>
 
                 <section>
@@ -527,7 +532,12 @@ module.exports = UserPropertiesPage;
               <!--require all modules at the top-->
               <section>
                 <h3>Require all the modules at the top</h3>
-                <p class="fragment">WHY: The module dependencies should be clear and easy to find</p>
+                <div class="fragment">
+                  <p>WHY:</p>
+                  <ul>
+                    <li>The module dependencies should be clear and easy to find</li>
+                  </ul>
+                </div>
               </section>
 
                 <section>
@@ -551,7 +561,7 @@ describe('User properties page', function() {
               <section>
                 <h3>Instantiate all Page Objects at the beginning of the test suite</h3>
                 <div class="fragment">
-                  <span>WHY:</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>Separates dependencies from the test code</li>
                     <li>Makes the dependencies available to all specs of the suite</li>
@@ -583,7 +593,12 @@ describe('User properties page', function() {
               <!--public elements in constructor-->
               <section>
                 <h3>Declare all the Page Object public elements in the constructor</h3>
-                <p class="fragment">WHY: The user of the Page Object should have quick access to the available elements on a page</p>
+                <div class="fragment">
+                  <p>WHY:</p>
+                  <ul>
+                    <li>The user of the Page Object should have quick access to the available elements on a page</li>
+                  </ul>
+                </div>
               </section>
 
                 <section>
@@ -648,7 +663,7 @@ var UserPropertiesPage = function() {
               <section>
                 <h3>Declare Page Object functions for operations that require more that one step</h3>
                 <div class="fragment">
-                  <span>WHY:</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>Most elements are already exposed by the Page Object and can be used directly in the test</li>
                     <li>Doing otherwise will not have any added value</li>
@@ -724,7 +739,7 @@ describe('User properties page', function() {
               <section>
                 <h3>Don't make any assertions in your Page Objects</h3>
                 <div class="fragment">
-                  <span>WHY:</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>It is the responsibility of the test to do all the assertions</li>
                     <li>A reader of the test should be able to understand the behavior of the application by
@@ -738,7 +753,7 @@ describe('User properties page', function() {
               <section>
                 <h3>Add Page Object wrappers for directives, dialogs, and common elements</h3>
                 <div class="fragment">
-                  <span>WHY</span>
+                  <p>WHY</p>
                   <ul>
                     <li>You can use them in multiple tests</li>
                     <li>Avoid code duplication</li>
@@ -751,7 +766,7 @@ describe('User properties page', function() {
               <section>
                 <h3>Avoid text locators for text that changes frequently</h3>
                 <div class="fragment">
-                  <span>WHY</span>
+                  <p>WHY</p>
                   <ul>
                     <li>Text for buttons, links, and labels tends to change over time</li>
                     <li>Your tests should not break when you make minor text changes</li>
@@ -773,7 +788,7 @@ describe('User properties page', function() {
               <section>
                 <h2>Use Jasmine 2</h2>
                 <div class="fragment">
-                  <span>WHY</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>You can use <strong>beforeAll</strong> and
                       <strong>afterAll</strong></li>
@@ -786,7 +801,7 @@ describe('User properties page', function() {
               <section>
                 <h3>Make your tests independent at least at the file level</h3>
                 <div class="fragment">
-                  <span>WHY</span>
+                  <p>WHY:</p>
                   <ul>
                     <li>You can run tests in parallel with sharding</li>
                     <li>The execution order is not guaranteed</li>
