@@ -242,7 +242,6 @@ var personName = element(by.model('person.name'));
 
 * Why? It is easier to write your locator
 * Why? The code is less likely to change than other markup
-* Why? The locators are more readable
 
 
 ### Avoid text locators for text that changes frequently
@@ -251,31 +250,6 @@ var personName = element(by.model('person.name'));
   `by.cssContainingText`.
 * Why? Text for buttons, links, and labels tends to change over time. Minor text
   changes in your application should not break your tests.
-
-
-### Prefer $ and $$ for css locators
-
-* Use the shorthand protractor notation `$` and `$$` for `by.css` locators.
-
-```html
-<div class="red">
-  <li class="one">One</li>
-  <li>Two</li>
-  <li>Three</li>
-</div>
-```
-
-```js
-// The following element finders are equivalent
-var first = element(by.css('.one'));
-var secondElement = element.all(by.css('.red li')).get(1);
-
-var first = $('.one');
-var secondElement = $$('.red li').get(1);
-```
-
-* Why? They are shorter and easier to read.
-* Why? You can use them in the console when debugging a test.
 
 
 # Tests
