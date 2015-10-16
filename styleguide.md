@@ -104,7 +104,7 @@ var UserPropertiesPage = function() {
   elements on a page
 
 
-### Declare page object functions for operations that require more than one step.
+### Declare page object functions for operations that require more than one step
 
 ```javascript
 /**
@@ -133,48 +133,13 @@ var UserPropertiesPage = function() {
   directly in the test.
 * Why? Doing otherwise will not have any added value
 
-## Page object locators
+### Avoid using expect() in page objects
 
-### Favor protractor locator strategies when possible
+* Don't make any assertions in your Page Objects
 
-* Prefer protractor-specific locators such as `by.model` and `by.binding`.
-* These locators are usually specific, short, and easy to read.
-
-```html
-<ul class="red">
-  <li>{{color.name}}</li>
-  <li>{{color.shade}}</li>
-  <li>{{color.code}}</li>
-</ul>
-
-<div class="details">
-  <div class="personal">
-    <input ng-model="person.name">
-  </div>
-</div>
-```
-
-```js
-// avoid
-var nameElement = element.all(by.css('.red li')).get(0);
-var personName = element(by.css('.details .personal input'));
-
-// recommended
-var nameElement = element(by.binding('color.name'));
-var personName = element(by.model('person.name'));
-```
-
-* Why? It is easier to write your locator
-* Why? The code is less likely to change than other markup
-* Why? The locators are more readable
-
-### Try to avoid text locators for text that changes frequently
-
-* Try to avoid text-based locators such as `by.linkText`, `by.buttonText`,
-  `by.cssContainingText`.
-
-* Why? Text for buttons, links, and labels tends to change over time. Minor text
-  changes in your application should not break your tests.
+* Why? It is the responsibility of the test to do all the assertions.
+* Why? A reader of the test should be able to understand the behavior of the
+  application by looking at the test only
 
 ### Add Page Object wrappers for directives, dialogs, and common elements
 
@@ -243,6 +208,74 @@ describe('protractor webstie', function() {
 
 * Why? When you have a large team and multiple e2e tests people tend to write
   their own custom locators for the same directives.
+
+## Locators
+
+### Favor protractor locator strategies when possible
+
+* Prefer protractor-specific locators such as `by.model` and `by.binding`.
+* These locators are usually specific, short, and easy to read.
+
+```html
+<ul class="red">
+  <li>{{color.name}}</li>
+  <li>{{color.shade}}</li>
+  <li>{{color.code}}</li>
+</ul>
+
+<div class="details">
+  <div class="personal">
+    <input ng-model="person.name">
+  </div>
+</div>
+```
+
+```js
+// avoid
+var nameElement = element.all(by.css('.red li')).get(0);
+var personName = element(by.css('.details .personal input'));
+
+// recommended
+var nameElement = element(by.binding('color.name'));
+var personName = element(by.model('person.name'));
+```
+
+* Why? It is easier to write your locator
+* Why? The code is less likely to change than other markup
+* Why? The locators are more readable
+
+
+### Avoid text locators for text that changes frequently
+
+* Try to avoid text-based locators such as `by.linkText`, `by.buttonText`,
+  `by.cssContainingText`.
+* Why? Text for buttons, links, and labels tends to change over time. Minor text
+  changes in your application should not break your tests.
+
+
+### Prefer $ and $$ for css locators
+
+* Use the shorthand protractor notation `$` and `$$` for `by.css` locators.
+
+```html
+<div class="red">
+  <li class="one">One</li>
+  <li>Two</li>
+  <li>Three</li>
+</div>
+```
+
+```js
+// The following element finders are equivalent
+var first = element(by.css('.one'));
+var secondElement = element.all(by.css('.red li')).get(1);
+
+var first = $('.one');
+var secondElement = $$('.red li').get(1);
+```
+
+* Why? They are shorter and easier to read.
+* Why? You can use them in the console when debugging a test.
 
 
 # Tests
