@@ -71,40 +71,35 @@
                 </section>
 
                 <section>
-                    <h2>#1</h2>
-                    <p class="fragment">WHAT: Don't cheat on your tests</p>
-                    <p class="fragment">WHY: Tests are there for a reason. You'll only be cheating on yourself.</p>
+                  <h3>Don't cheat on your tests</h3>
+                  <p class="fragment">WHY: Tests are there for a reason. You'll only be cheating on yourself.</p>
                 </section>
 
                 <section>
-                    <h2>#2</h2>
-                    <p class="fragment">WHAT: Don't e2e test what you can unit test</p>
+                    <h3>Don't e2e test what you can unit test</h3>
                     <p class="fragment">WHY: Unit tests are much faster than e2e tests</p>
                 </section>
 
                 <section>
-                    <h2>#3</h2>
-                    <p class="fragment">WHAT: Don't e2e test what you already unit tested</p>
-                    <p class="fragment">WHY: This one should be pretty obvious ;)</p>
+                  <h3>Don't e2e test what you already unit tested</h3>
+                  <p class="fragment">WHY: This one should be pretty obvious ;)</p>
                 </section>
 
                 <section>
-                    <h2>#3</h2>
-                    <p>WHAT: Don't e2e test what you already unit tested</p>
-                    <p>WHY: Avoid duplicate tests</p>
+                  <h3>Don't e2e test what you already unit tested</h3>
+                  <p>WHY: Avoid duplicate tests</p>
                 </section>
 
                 <section>
-                    <h2>#4</h2>
-                    <p class="fragment">WHAT: Put all e2e test files in one dedicated folder</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Easy to find</li>
-                            <li>Separates them from unit tests</li>
-                            <li>Cleaner folder structure</li>
-                        </ul>
-                    </div>
+                  <h3>Put all e2e test files in one dedicated folder</h3>
+                  <div class="fragment">
+                    <span>WHY:</span>
+                    <ul>
+                      <li>Easy to find</li>
+                      <li>Separates them from unit tests</li>
+                      <li>Cleaner folder structure</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section>
@@ -185,15 +180,14 @@
                 </section>
 
                 <section>
-                    <h2>#5</h2>
-                    <p class="fragment">WHAT: Use one configuration file</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Use your build tool to setup different configurations</li>
-                            <li>Avoid duplicate configuration code</li>
-                        </ul>
-                    </div>
+                  <h3>Use one configuration file</h3>
+                  <div class="fragment">
+                    <span>WHY:</span>
+                    <ul>
+                      <li>Use your build tool to setup different configurations</li>
+                      <li>Avoid duplicate configuration code</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section>
@@ -264,16 +258,15 @@ e2e.dev: {
                 </section>
 
                 <section>
-                    <h2>#6</h2>
-                    <p class="fragment">WHAT: Favor protractor locator strategies when possible</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Access elements easier</li>
-                            <li>Code is less likely to change than other markup</li>
-                            <li>More readable locators</li>
-                        </ul>
-                    </div>
+                  <h3>Favor protractor locator strategies when possible</h3>
+                  <div class="fragment">
+                    <span>WHY:</span>
+                    <ul>
+                      <li>Access elements easier</li>
+                      <li>Code is less likely to change than other markup</li>
+                      <li>More readable locators</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section>
@@ -355,29 +348,26 @@ var elem = element(by.model('person.name'));
                 </section>
 
                 <section>
-                    <h2>#7</h2>
-                    <p class="fragment">WHAT: Favor by.id, by.css and by.name locators when possible and when no protractor
-                        locators are available</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Access elements easier</li>
-                            <li>Select markup that is less likely to change</li>
-                            <li>More readable locators</li>
-                        </ul>
-                    </div>
+                  <h3>Favor by.id and by.css when no protractor locators are available</h3>
+                  <div class="fragment">
+                    <span>WHY:</span>
+                    <ul>
+                      <li>Access elements easier</li>
+                      <li>Select markup that is less likely to change</li>
+                      <li>More readable locators</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section>
-                    <h2>#8</h2>
-                    <p class="fragment">WHAT: NEVER use xpath</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Markup is very easily subject to change</li>
-                            <li>Unreadable locator</li>
-                        </ul>
-                    </div>
+                  <h3>NEVER use xpath</h3>
+                  <div class="fragment">
+                    <span>WHY:</span>
+                    <ul>
+                      <li>Markup is very easily subject to change</li>
+                      <li>Unreadable locator</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section>
@@ -390,15 +380,14 @@ var elem = element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[
                 </section>
 
                 <section>
-                    <h2>#9</h2>
-                    <p class="fragment">WHAT: NEVER use xpath</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>xpath is known to have performance issues</li>
-                            <li>Unreadable locator</li>
-                        </ul>
-                    </div>
+                  <h3>NEVER use xpath</h3>
+                  <div class="fragment">
+                    <span>WHY:</span>
+                    <ul>
+                      <li>xpath is known to have performance issues</li>
+                      <li>Unreadable locator</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section>
@@ -411,16 +400,15 @@ var elem = element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[
                 </section>
 
                 <section>
-                    <h2>#10</h2>
-                    <p class="fragment">WHAT: Use Page Objects to interact with the page under test</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Encapsulate information about the elements on the page under test</li>
-                            <li>They can be reused across multiple tests</li>
-                            <li>Decouple the test logic from implementation details</li>
-                        </ul>
-                    </div>
+                  <h3>Use Page Objects to interact with the view under test</h3>
+                  <div class="fragment">
+                    <span>WHY:</span>
+                    <ul>
+                      <li>Encapsulate information about the elements on the page under test</li>
+                      <li>They can be reused across multiple tests</li>
+                      <li>Decouple the test logic from implementation details</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section>
@@ -486,15 +474,13 @@ describe('Question page', function() {
                 </section>
 
                 <section>
-                    <h2>#11</h2>
-                    <p class="fragment">WHAT: Declare one Page Object per file</p>
-                    <p class="fragment">WHY: Keeps code clean and makes things easy to find</p>
+                  <h3>Declare one Page Object per file</h3>
+                  <p class="fragment">WHY: Keeps code clean and makes things easy to find</p>
                 </section>
 
                 <section>
-                    <h2>#12</h2>
-                    <p class="fragment">WHAT: Use a single module.exports at the end of the Page Object file</p>
-                    <p class="fragment">WHY: One Page Object per file means there's only one class to export</p>
+                  <h3>Use a single module.exports at the end of the Page Object file</h3>
+                  <p class="fragment">WHY: One Page Object per file means there's only one class to export</p>
                 </section>
 
                 <section>
@@ -526,9 +512,8 @@ module.exports = UserPropertiesPage;
                 </section>
 
                 <section>
-                    <h2>#13</h2>
-                    <p class="fragment">WHAT: Require all the modules at the top</p>
-                    <p class="fragment">WHY: The module dependencies should be clear and easy to find</p>
+                  <h3>Require all the modules at the top</h3>
+                  <p class="fragment">WHY: The module dependencies should be clear and easy to find</p>
                 </section>
 
                 <section>
@@ -549,15 +534,14 @@ describe('User properties page', function() {
                 </section>
 
                 <section>
-                    <h2>#14</h2>
-                    <p class="fragment">WHAT: Instantiate all Page Objects at the beginning of the test suite</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Separates dependencies from the test code</li>
-                            <li>Makes the dependencies available to all specs of the suite</li>
-                        </ul>
-                    </div>
+                  <h3>Instantiate all Page Objects at the beginning of the test suite</h3>
+                  <div class="fragment">
+                    <span>WHY:</span>
+                    <ul>
+                      <li>Separates dependencies from the test code</li>
+                      <li>Makes the dependencies available to all specs of the suite</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section>
@@ -582,9 +566,8 @@ describe('User properties page', function() {
                 </section>
 
                 <section>
-                    <h2>#15</h2>
-                    <p class="fragment">WHAT: Declare all the Page Object public elements in the constructor</p>
-                    <p class="fragment">WHY: The user of the Page Object should have quick access to the available elements on a page</p>
+                  <h3>Declare all the Page Object public elements in the constructor</h3>
+                  <p class="fragment">WHY: The user of the Page Object should have quick access to the available elements on a page</p>
                 </section>
 
                 <section>
@@ -646,15 +629,14 @@ var UserPropertiesPage = function() {
                 </section>
 
                 <section>
-                    <h2>#16</h2>
-                    <p class="fragment">WHAT: Declare Page Object functions for operations that require more that one step</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Most elements are already exposed by the Page Object and can be used directly in the test</li>
-                            <li>Doing otherwise will not have any added value</li>
-                        </ul>
-                    </div>
+                  <h3>Declare Page Object functions for operations that require more that one step</h3>
+                  <div class="fragment">
+                    <span>WHY:</span>
+                    <ul>
+                      <li>Most elements are already exposed by the Page Object and can be used directly in the test</li>
+                      <li>Doing otherwise will not have any added value</li>
+                    </ul>
+                  </div>
                 </section>
 
                 <section>
@@ -722,17 +704,42 @@ describe('User properties page', function() {
                 </section>
 
                 <section>
-                    <h2>#17</h2>
-                    <p class="fragment">WHAT: Don't make any assertions in your Page Objects</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>It is the responsibility of the test to do all the assertions</li>
-                            <li>A reader of the test should be able to understand the behavior of the application by
-                                looking at the test only</li>
-                        </ul>
-                    </div>
+                  <h3>Don't make any assertions in your Page Objects</h3>
+                  <div class="fragment">
+                    <span>WHY:</span>
+                    <ul>
+                      <li>It is the responsibility of the test to do all the assertions</li>
+                      <li>A reader of the test should be able to understand the behavior of the application by
+                        looking at the test only
+                      </li>
+                    </ul>
+                  </div>
                 </section>
+
+              <!-- mini page objects -->
+              <section>
+                <h3>Add Page Object wrappers for directives, dialogs, and common elements</h3>
+                <div class="fragment">
+                  <span>WHY</span>
+                  <ul>
+                    <li>You can use them in multiple tests</li>
+                    <li>Avoid code duplication</li>
+                    <li>When the directive changes you only need to change the wrapper once</li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- avoid text locators -->
+              <section>
+                <h3>Avoid text locators for text that changes frequently</h3>
+                <div class="fragment">
+                  <span>WHY</span>
+                  <ul>
+                    <li>Text for buttons, links, and labels tends to change over time</li>
+                    <li>Your tests should not break when you make minor text changes</li>
+                  </ul>
+                </div>
+              </section>
             </div>
         </div>
 
