@@ -8,4 +8,5 @@ var nameElem = element.all(by.css('.details'))
 ```
 * I would not recommend by name since you can use by css instead and you
   cannot copy paster 
-* Use prefer instead of favor
+* Use `prefer` instead of `favor`
+*
