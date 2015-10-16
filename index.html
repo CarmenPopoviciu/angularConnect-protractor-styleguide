@@ -27,7 +27,7 @@
                         <h1>Protractor styleguide</h1>
                     </div>
                     <div class="speaker">
-                        <img class="avatar" src="images/carmen-profile.jpg"> 
+                        <img class="avatar" src="images/carmen-profile.jpg">
                         <p>@CarmenPopoviciu</p>
                     </div>
                     <div class="speaker">
@@ -297,7 +297,7 @@ e2e.dev: {
                         <code class="javascript">
 /* avoid */
 
-var nameElem = element.all(by.css('.red')).get(0);
+var nameElem = element.all(by.css('.red li')).get(0);
                         </code>
                     </pre>
                 </section>
@@ -657,7 +657,7 @@ var UserPropertiesPage = function() {
                     <h2>#16</h2>
                     <p class="fragment">WHAT: Declare Page Object functions for operations that require more that one step</p>
                     <div class="fragment">
-                        <span>WHY:</span> 
+                        <span>WHY:</span>
                         <ul>
                             <li>Most elements are already exposed by the Page Object and can be used directly in the test</li>
                             <li>Doing otherwise will not have any added value</li>

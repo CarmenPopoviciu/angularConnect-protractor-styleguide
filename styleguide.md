@@ -74,6 +74,39 @@ var UserPropertiesPage = function() {
 
 ## Page object locators
 
+### Favor protractor locator strategies when possible
+
+* Prefer protractor-specific locators such as `by.model` and `by.binding`.
+* These locators are usually specific, short, and easy to read.
+
+```html
+<ul class="red">
+  <li>{{color.name}}</li>
+  <li>{{color.shade}}</li>
+  <li>{{color.code}}</li>
+</ul>
+
+<div class="details">
+  <div class="personal">
+    <input ng-model="person.name">
+  </div>
+</div>
+```
+
+```js
+// avoid
+var nameElement = element.all(by.css('.red li')).get(0);
+var personName = element(by.css('.details .personal input'));
+
+// recommended
+var nameElement = element(by.binding('color.name'));
+var personName = element(by.model('person.name'));
+```
+
+* Why? It is easier to write your locator
+* Why? The code is less likely to change than other markup
+* Why? The locators are more readable
+
 ### Try to avoid text locators for text text that changes frequently
 
 * Try to avoid text-based locators such as `by.linkText`, `by.buttonText`,
@@ -81,6 +114,65 @@ var UserPropertiesPage = function() {
 
 * Why? Text for buttons, links, and labels tends to change over time. Minor text
   changes in your application should not break your tests.
+
+### Add Page Object wrappers for directives
+
+* Some directives render complex HTML or they change frequently. Avoid code
+  duplication by writing wrappers to interact with complex directives.
+* When the directive changes you only need to change the wrapper once.
+
+For example, the Protractor website has navigation bar with multiple dropdown
+menus. Each menu has multiple options. A page object for the menu would look
+like this:
+
+```js
+/**
+ * Page object for Protractor website menu.
+ * @constructor
+ */
+var MenuPage = function() {
+  this.dropdown = function(dropdownName) {
+    var openDropdown = function() {
+      $('.navbar-nav')
+          .element(by.linkText(dropdownName))
+          .click();
+    };
+
+    return {
+      /**
+       * Get an option element under a dropdown.
+       * @param {string} optionName
+       * @return {ElementFinder}
+       */
+      option: function(optionName) {
+        openDropdown();
+        return $('.dropdown.open')
+            .element(by.linkText(optionName));
+      }
+    }
+  };
+};
+
+module.exports = MenuPage();
+```
+
+```js
+var Menu = require('./menu');
+
+describe('protractor webstie', function() {
+
+  var menu = new Menu();
+
+  it('should navigate to API view', function() {
+    browser.get('http://www.protractortest.org/#/');
+
+    menu.dropdown('Reference').option('Protractor API').click();
+
+    expect(browser.getCurrentUrl())
+        .toBe('http://www.protractortest.org/#/api');
+  });
+});
+```
 
 # Tests
 
