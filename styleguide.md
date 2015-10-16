@@ -107,7 +107,7 @@ var personName = element(by.model('person.name'));
 * Why? The code is less likely to change than other markup
 * Why? The locators are more readable
 
-### Try to avoid text locators for text text that changes frequently
+### Try to avoid text locators for text that changes frequently
 
 * Try to avoid text-based locators such as `by.linkText`, `by.buttonText`,
   `by.cssContainingText`.
