@@ -52,3 +52,7 @@
     border-radius: 1.5em;
     margin: 0;
 }
+
+pre code.javascript {
+  overflow-wrap: break-word;
+}
