@@ -17,90 +17,95 @@
 
         <div class="reveal">
             <div class="slides">
-                <!-- INTRO -->
-                <section>
-                    <div class="title">
-                        <img src="images/protractor-logo.png">
-                        <h1>Protractor styleguide</h1>
-                    </div>
-                    <div class="speaker">
-                        <img class="avatar" src="images/carmen-profile.jpg">
-                        <p>@CarmenPopoviciu</p>
-                    </div>
-                    <div class="speaker">
-                        <img class="avatar" src="images/andres-profile.jpg">
-                        <p>@andresdom</p>
-                    </div>
-                </section>
+              <!-- INTRO -->
+              <section>
+                <div class="title">
+                  <img src="images/protractor-logo.png">
+                  <h1>Protractor styleguide</h1>
+                </div>
+                <div class="speaker">
+                  <img class="avatar" src="images/carmen-profile.jpg">
+                  <p>@CarmenPopoviciu</p>
+                </div>
+                <div class="speaker">
+                  <img class="avatar" src="images/andres-profile.jpg">
+                  <p>@andresdom</p>
+                </div>
+              </section>
 
-                <section>
-                    <h2>TODO - some intro -</h2>
-                </section>
+              <section>
+                <h2>TODO - some intro -</h2>
+              </section>
 
-                <!-- E2E GENERICS -->
-                <section>
-                    <h2>E2E Testing</h2>
-                </section>
+              <!-- E2E GENERICS -->
+              <section>
+                <h2>E2E Testing</h2>
+              </section>
 
-                <section>
-                    <h2>Why is it important?</h2>
-                    <ul>
-                        <li class="fragment">Tells you that everything is OK</li>
-                        <li class="fragment">Prevents production incidents</li>
-                        <li class="fragment">Checks the app from the user's perspective</li>
-                        <li class="fragment">Manual testing is not a good idea</li>
-                    </ul>
-                </section>
+              <section>
+                <h2>Why is it important?</h2>
+                <ul>
+                  <li class="fragment">Tells you that everything is OK</li>
+                  <li class="fragment">Prevents production incidents</li>
+                  <li class="fragment">Checks the app from the user's perspective</li>
+                  <li class="fragment">Manual testing is not a good idea</li>
+                </ul>
+              </section>
 
-                <section>
-                    <h2>What do we e2e test?</h2>
-                    <ul>
-                        <li class="fragment">Major subpages or routes in the site</li>
-                        <li class="fragment">Main user interaction flows</li>
-                        <li class="fragment">Essential elements on a page</li>
-                    </ul>
-                </section>
+              <section>
+                <h2>What do we e2e test?</h2>
+                <ul>
+                  <li class="fragment">Major subpages or routes in the site</li>
+                  <li class="fragment">Main user interaction flows</li>
+                  <li class="fragment">Essential elements on a page</li>
+                </ul>
+              </section>
 
-                <!-- RULES -->
-                <section>
-                    <h2>Protractor Styleguide</h2>
-                </section>
+              <!-- RULES -->
+              <section>
+                <h2>Protractor Styleguide</h2>
+              </section>
 
-                <section>
-                    <h1>Our rules</h1>
-                </section>
+              <section>
+                <h1>Our rules</h1>
+              </section>
 
-                <section>
-                  <h3>Don't cheat on your tests</h3>
-                  <p class="fragment">WHY: Tests are there for a reason. You'll only be cheating on yourself.</p>
-                </section>
+              <!--don't cheat-->
+              <section>
+                <h3>Don't cheat on your tests</h3>
+                <p class="fragment">WHY: Tests are there for a reason. You'll only be cheating on yourself.</p>
+              </section>
 
-                <section>
-                    <h3>Don't e2e test what you can unit test</h3>
-                    <p class="fragment">WHY: Unit tests are much faster than e2e tests</p>
-                </section>
+              <!--don't e2e what you can unit test-->
+              <section>
+                  <h3>Don't e2e test what you can unit test</h3>
+                  <p class="fragment">WHY: Unit tests are much faster than e2e tests</p>
+              </section>
 
-                <section>
-                  <h3>Don't e2e test what you already unit tested</h3>
-                  <p class="fragment">WHY: This one should be pretty obvious ;)</p>
-                </section>
+              <!--don't e2e what has unit tests-->
+              <section>
+                <h3>Don't e2e test what you already unit tested</h3>
+                <p class="fragment">WHY: This one should be pretty obvious ;)</p>
+              </section>
 
-                <section>
-                  <h3>Don't e2e test what you already unit tested</h3>
-                  <p>WHY: Avoid duplicate tests</p>
-                </section>
+              <!--don't e2e what has unit tests 2-->
+              <section>
+                <h3>Don't e2e test what you already unit tested</h3>
+                <p>WHY: Avoid duplicate tests</p>
+              </section>
 
-                <section>
-                  <h3>Put all e2e test files in one dedicated folder</h3>
-                  <div class="fragment">
-                    <span>WHY:</span>
-                    <ul>
-                      <li>Easy to find</li>
-                      <li>Separates them from unit tests</li>
-                      <li>Cleaner folder structure</li>
-                    </ul>
-                  </div>
-                </section>
+              <!--put all thests in a folder-->
+              <section>
+                <h3>Put all e2e test files in one dedicated folder</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Easy to find</li>
+                    <li>Separates them from unit tests</li>
+                    <li>Cleaner folder structure</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -179,16 +184,17 @@
                     </pre>
                 </section>
 
-                <section>
-                  <h3>Use one configuration file</h3>
-                  <div class="fragment">
-                    <span>WHY:</span>
-                    <ul>
-                      <li>Use your build tool to setup different configurations</li>
-                      <li>Avoid duplicate configuration code</li>
-                    </ul>
-                  </div>
-                </section>
+              <!--use one configuration file-->
+              <section>
+                <h3>Use one configuration file</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Use your build tool to setup different configurations</li>
+                    <li>Avoid duplicate configuration code</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -257,17 +263,18 @@ e2e.dev: {
                     </pre>
                 </section>
 
-                <section>
-                  <h3>Favor protractor locator strategies when possible</h3>
-                  <div class="fragment">
-                    <span>WHY:</span>
-                    <ul>
-                      <li>Access elements easier</li>
-                      <li>Code is less likely to change than other markup</li>
-                      <li>More readable locators</li>
-                    </ul>
-                  </div>
-                </section>
+              <!--use protractor locators-->
+              <section>
+                <h3>Favor protractor locator strategies when possible</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Access elements easier</li>
+                    <li>Code is less likely to change than other markup</li>
+                    <li>More readable locators</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -347,28 +354,30 @@ var elem = element(by.model('person.name'));
                     </pre>
                 </section>
 
-                <section>
-                  <h3>Favor by.id and by.css when no protractor locators are available</h3>
-                  <div class="fragment">
-                    <span>WHY:</span>
-                    <ul>
-                      <li>Access elements easier</li>
-                      <li>Select markup that is less likely to change</li>
-                      <li>More readable locators</li>
-                    </ul>
-                  </div>
-                </section>
+              <!--use id and css-->
+              <section>
+                <h3>Favor by.id and by.css when no protractor locators are available</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Access elements easier</li>
+                    <li>Select markup that is less likely to change</li>
+                    <li>More readable locators</li>
+                  </ul>
+                </div>
+              </section>
 
-                <section>
-                  <h3>NEVER use xpath</h3>
-                  <div class="fragment">
-                    <span>WHY:</span>
-                    <ul>
-                      <li>Markup is very easily subject to change</li>
-                      <li>Unreadable locator</li>
-                    </ul>
-                  </div>
-                </section>
+              <!--never use xpath-->
+              <section>
+                <h3>NEVER use xpath</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Markup is very easily subject to change</li>
+                    <li>Unreadable locator</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -379,16 +388,17 @@ var elem = element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[
                     </pre>
                 </section>
 
-                <section>
-                  <h3>NEVER use xpath</h3>
-                  <div class="fragment">
-                    <span>WHY:</span>
-                    <ul>
-                      <li>xpath is known to have performance issues</li>
-                      <li>Unreadable locator</li>
-                    </ul>
-                  </div>
-                </section>
+              <!--never use xpath 2-->
+              <section>
+                <h3>NEVER use xpath</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>xpath is known to have performance issues</li>
+                    <li>Unreadable locator</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -399,17 +409,18 @@ var elem = element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[
                     </pre>
                 </section>
 
-                <section>
-                  <h3>Use Page Objects to interact with the view under test</h3>
-                  <div class="fragment">
-                    <span>WHY:</span>
-                    <ul>
-                      <li>Encapsulate information about the elements on the page under test</li>
-                      <li>They can be reused across multiple tests</li>
-                      <li>Decouple the test logic from implementation details</li>
-                    </ul>
-                  </div>
-                </section>
+              <!--use page objects-->
+              <section>
+                <h3>Use Page Objects to interact with the view under test</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Encapsulate information about the elements on the page under test</li>
+                    <li>They can be reused across multiple tests</li>
+                    <li>Decouple the test logic from implementation details</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -473,15 +484,17 @@ describe('Question page', function() {
                     </pre>
                 </section>
 
-                <section>
-                  <h3>Declare one Page Object per file</h3>
-                  <p class="fragment">WHY: Keeps code clean and makes things easy to find</p>
-                </section>
+              <!--one page object per file-->
+              <section>
+                <h3>Declare one Page Object per file</h3>
+                <p class="fragment">WHY: Keeps code clean and makes things easy to find</p>
+              </section>
 
-                <section>
-                  <h3>Use a single module.exports at the end of the Page Object file</h3>
-                  <p class="fragment">WHY: One Page Object per file means there's only one class to export</p>
-                </section>
+              <!--single export-->
+              <section>
+                <h3>Use a single module.exports at the end of the Page Object file</h3>
+                <p class="fragment">WHY: One Page Object per file means there's only one class to export</p>
+              </section>
 
                 <section>
                     <pre>
@@ -511,10 +524,11 @@ module.exports = UserPropertiesPage;
                     </pre>
                 </section>
 
-                <section>
-                  <h3>Require all the modules at the top</h3>
-                  <p class="fragment">WHY: The module dependencies should be clear and easy to find</p>
-                </section>
+              <!--require all modules at the top-->
+              <section>
+                <h3>Require all the modules at the top</h3>
+                <p class="fragment">WHY: The module dependencies should be clear and easy to find</p>
+              </section>
 
                 <section>
                     <pre>
@@ -533,16 +547,17 @@ describe('User properties page', function() {
                     </pre>
                 </section>
 
-                <section>
-                  <h3>Instantiate all Page Objects at the beginning of the test suite</h3>
-                  <div class="fragment">
-                    <span>WHY:</span>
-                    <ul>
-                      <li>Separates dependencies from the test code</li>
-                      <li>Makes the dependencies available to all specs of the suite</li>
-                    </ul>
-                  </div>
-                </section>
+              <!--create page object instances at the beginning-->
+              <section>
+                <h3>Instantiate all Page Objects at the beginning of the test suite</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Separates dependencies from the test code</li>
+                    <li>Makes the dependencies available to all specs of the suite</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -565,10 +580,11 @@ describe('User properties page', function() {
                     </pre>
                 </section>
 
-                <section>
-                  <h3>Declare all the Page Object public elements in the constructor</h3>
-                  <p class="fragment">WHY: The user of the Page Object should have quick access to the available elements on a page</p>
-                </section>
+              <!--public elements in constructor-->
+              <section>
+                <h3>Declare all the Page Object public elements in the constructor</h3>
+                <p class="fragment">WHY: The user of the Page Object should have quick access to the available elements on a page</p>
+              </section>
 
                 <section>
                     <pre>
@@ -628,16 +644,17 @@ var UserPropertiesPage = function() {
                     </pre>
                 </section>
 
-                <section>
-                  <h3>Declare Page Object functions for operations that require more that one step</h3>
-                  <div class="fragment">
-                    <span>WHY:</span>
-                    <ul>
-                      <li>Most elements are already exposed by the Page Object and can be used directly in the test</li>
-                      <li>Doing otherwise will not have any added value</li>
-                    </ul>
-                  </div>
-                </section>
+              <!-- page object functions -->
+              <section>
+                <h3>Declare Page Object functions for operations that require more that one step</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Most elements are already exposed by the Page Object and can be used directly in the test</li>
+                    <li>Doing otherwise will not have any added value</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre style="height: 320px;">
@@ -703,18 +720,19 @@ describe('User properties page', function() {
                     </pre>
                 </section>
 
-                <section>
-                  <h3>Don't make any assertions in your Page Objects</h3>
-                  <div class="fragment">
-                    <span>WHY:</span>
-                    <ul>
-                      <li>It is the responsibility of the test to do all the assertions</li>
-                      <li>A reader of the test should be able to understand the behavior of the application by
-                        looking at the test only
-                      </li>
-                    </ul>
-                  </div>
-                </section>
+              <!-- no assertions in page objects -->
+              <section>
+                <h3>Don't make any assertions in your Page Objects</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>It is the responsibility of the test to do all the assertions</li>
+                    <li>A reader of the test should be able to understand the behavior of the application by
+                      looking at the test only
+                    </li>
+                  </ul>
+                </div>
+              </section>
 
               <!-- mini page objects -->
               <section>
