@@ -3,12 +3,10 @@
     <head>
         <title>Hello ng-world!</title>
 
-
         <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
         <link rel="stylesheet" href="node_modules/reveal.js/css/theme/simple.css">
         <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
-
         <link rel="stylesheet" href="styles/slides.css">
     </head>
 
@@ -17,110 +15,101 @@
         <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
         <script src="node_modules/reveal.js/js/reveal.js"></script>
 
-
         <div class="reveal">
             <div class="slides">
-                <!-- INTRO -->
-                <section>
-                    <div class="title">
-                        <img src="images/protractor-logo.png">
-                        <h1>Protractor styleguide</h1>
-                    </div>
-                    <div class="speaker">
-                        <img class="avatar" src="images/carmen-profile.jpg"> 
-                        <p>@CarmenPopoviciu</p>
-                    </div>
-                    <div class="speaker">
-                        <img class="avatar" src="images/andres-profile.jpg">
-                        <p>@andresdom</p>
-                    </div>
-                </section>
+              <!-- INTRO -->
+              <section>
+                <div class="title">
+                  <img src="images/protractor-logo.png">
+                  <h1>Protractor styleguide</h1>
+                </div>
+                <div class="speaker">
+                  <img class="avatar" src="images/carmen-profile.jpg">
+                  <p>@CarmenPopoviciu</p>
+                </div>
+                <div class="speaker">
+                  <img class="avatar" src="images/andres-profile.jpg">
+                  <p>@andresdom</p>
+                </div>
+              </section>
 
-                <section>
-                    <h2>TODO - some intro -</h2>
-                </section>
+              <section>
+                <h2>TODO - some intro -</h2>
+              </section>
 
+              <!-- E2E GENERICS -->
+              <section>
+                <h2>E2E Testing</h2>
+              </section>
 
+              <section>
+                <h2>Why is it important?</h2>
+                <ul>
+                  <li class="fragment">Tells you that everything is OK</li>
+                  <li class="fragment">Prevents production incidents</li>
+                  <li class="fragment">Checks the app from the user's perspective</li>
+                  <li class="fragment">Manual testing is not a good idea</li>
+                </ul>
+              </section>
 
-                <!-- E2E GENERICS -->
-                <section>
-                    <h2>E2E Testing</h2>
-                </section>
+              <section>
+                <h2>What do we e2e test?</h2>
+                <ul>
+                  <li class="fragment">Major subpages or routes in the site</li>
+                  <li class="fragment">Main user interaction flows</li>
+                  <li class="fragment">Essential elements on a page</li>
+                </ul>
+              </section>
 
-                <section>
-                    <h2>Why is it important?</h2>
-                    <ul>
-                        <li class="fragment">Tells you that everything is OK</li>
-                        <li class="fragment">Prevents production incidents</li>
-                        <li class="fragment">Checks the app from the user's perspective</li>
-                        <li class="fragment">Manual testing is not a good idea</li>
-                    </ul>
-                </section>
+              <!-- RULES -->
+              <section>
+                <h2>Protractor Styleguide</h2>
+              </section>
 
-                <section>
-                    <h2>What do we e2e test?</h2>
-                    <ul>
-                        <li class="fragment">Major subpages or routes in the site</li>
-                        <li class="fragment">Main user interaction flows</li>
-                        <li class="fragment">Essential elements on a page</li>
-                    </ul>
-                </section>
+              <section>
+                <h1>Our rules</h1>
+              </section>
 
+              <!--don't cheat-->
+              <section>
+                <h3>Don't cheat on your tests</h3>
+                <p class="fragment">WHY: Tests are there for a reason. You'll only be cheating on yourself.</p>
+              </section>
 
+              <!--don't e2e what you can unit test-->
+              <section>
+                  <h3>Don't e2e test what you can unit test</h3>
+                  <p class="fragment">WHY: Unit tests are much faster than e2e tests</p>
+              </section>
 
-                <!-- RULES -->
-                <section>
-                    <h2>Protractor Styleguide</h2>
-                </section>
+              <!--don't e2e what has unit tests-->
+              <section>
+                <h3>Don't e2e test what you already unit tested</h3>
+                <p class="fragment">WHY: This one should be pretty obvious ;)</p>
+              </section>
 
-                <section>
-                    <h2>// TODO mention why the styleguide is important</h2>
-                </section>
+              <!--don't e2e what has unit tests 2-->
+              <section>
+                <h3>Don't e2e test what you already unit tested</h3>
+                <p>WHY: Avoid duplicate tests</p>
+              </section>
 
-                <section>
-                    <h1>Our rules</h1>
-                </section>
+              <!--put all thests in a folder-->
+              <section>
+                <h3>Put all e2e test files in one dedicated folder</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Easy to find</li>
+                    <li>Separates them from unit tests</li>
+                    <li>Cleaner folder structure</li>
+                  </ul>
+                </div>
+              </section>
 
-                <section>
-                    <h2>#1</h2>
-                    <p class="fragment">WHAT: Don't cheat on your tests</p>
-                    <p class="fragment">WHY: Tests are there for a reason. You'll only be cheating on yourself.</p>
-                </section>
-
-                <section>
-                    <h2>#2</h2>
-                    <p class="fragment">WHAT: Don't e2e test what you can unit test</p>
-                    <p class="fragment">WHY: Unit tests are much faster than e2e tests</p>
-                </section>
-
-                <section>
-                    <h2>#3</h2>
-                    <p class="fragment">WHAT: Don't e2e test what you already unit tested</p>
-                    <p class="fragment">WHY: This one should be pretty obvious ;)</p>
-                </section>
-
-                <section>
-                    <h2>#3</h2>
-                    <p>WHAT: Don't e2e test what you already unit tested</p>
-                    <p>WHY: Avoid duplicate tests</p>
-                </section>
-
-                <section>
-                    <h2>#4</h2>
-                    <p class="fragment">WHAT: Put all e2e test files in one dedicated folder</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Easy to find</li>
-                            <li>Separates them from unit tests</li>
-                            <li>Cleaner folder structure</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section>
-                    <pre>
-                        <code class="javascript">
+              <section>
+                <pre>
+                  <code class="javascript">
 /* avoid */
 
 |-- app
@@ -141,8 +130,7 @@
                         </code>
                     </pre>
                 </section>
-
-                <section>
+               <section>
                     <pre>
                         <code class="javascript">
 /* recommended */
@@ -195,17 +183,17 @@
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#5</h2>
-                    <p class="fragment">WHAT: Use one configuration file</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Use your build tool to setup different configurations</li>
-                            <li>Avoid duplicate configuration code</li>
-                        </ul>
-                    </div>
-                </section>
+              <!--use one configuration file-->
+              <section>
+                <h3>Use one configuration file</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Use your build tool to setup different configurations</li>
+                    <li>Avoid duplicate configuration code</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -228,18 +216,18 @@ protractor.conf.test.js
 /* protractor.conf.js */
 exclude: [],
 multiCapabilities: [{
-    browserName: 'chrome',
-    shardTestFiles: true,
-    maxInstances: 3
+  browserName: 'chrome',
+  shardTestFiles: true,
+  maxInstances: 3
 }],
 allScriptsTimeout: 11000,
 getPageTimeout: 10000,
 framework: 'jasmine',
 jasmineNodeOpts: {
-    isVerbose: false,
-    showColors: true,
-    includeStackTrace: false,
-    defaultTimeoutInterval: 40000
+  isVerbose: false,
+  showColors: true,
+  includeStackTrace: false,
+  defaultTimeoutInterval: 40000
 }
                         </code>
                     </pre>
@@ -253,47 +241,47 @@ jasmineNodeOpts: {
 /* Gruntfile.js */
 // grunt-protractor-coverage config
 e2e.local: {
-    options: {
-        args: {
-            baseUrl: local_base_url,
-            seleniumAddress: local_selenium_address,
-            specs: ['..../**/*.spec.js']
-        }
+  options: {
+    args: {
+      baseUrl: local_base_url,
+      seleniumAddress: local_selenium_address,
+      specs: ['..../**/*.spec.js']
     }
+  }
 },
 e2e.dev: {
-    options: {
-        args: {
-            baseUrl: dev_base_url,
-            seleniumAddress: dev_selenium_address,
-            specs: ['..../**/*.spec.js']
-        }
+  options: {
+    args: {
+      baseUrl: dev_base_url,
+      seleniumAddress: dev_selenium_address,
+      specs: ['..../**/*.spec.js']
     }
+  }
 }
                         </code>
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#6</h2>
-                    <p class="fragment">WHAT: Favor protractor locator strategies when possible</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Access elements easier</li>
-                            <li>Code is less likely to change than other markup</li>
-                            <li>More readable locators</li>
-                        </ul>
-                    </div>
-                </section>
+              <!--use protractor locators-->
+              <section>
+                <h3>Favor protractor locator strategies when possible</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Access elements easier</li>
+                    <li>Code is less likely to change than other markup</li>
+                    <li>More readable locators</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
                         <code class="html">
 &lt;ul class="red"&gt;
-    &lt;li&gt;{{color.name}}&lt;/li&gt;
-    &lt;li&gt;{{color.shade}}&lt;/li&gt;
-    &lt;li&gt;{{color.code}}&lt;/li&gt;
+  &lt;li&gt;{{color.name}}&lt;/li&gt;
+  &lt;li&gt;{{color.shade}}&lt;/li&gt;
+  &lt;li&gt;{{color.code}}&lt;/li&gt;
 &lt;/ul&gt;
                         </code>
                     </pre>
@@ -301,7 +289,7 @@ e2e.dev: {
                         <code class="javascript">
 /* avoid */
 
-var nameElem = element.all(by.css('.red')).get(0);
+var nameElem = element.all(by.css('.red li')).get(0);
                         </code>
                     </pre>
                 </section>
@@ -310,9 +298,9 @@ var nameElem = element.all(by.css('.red')).get(0);
                     <pre>
                         <code class="html">
 &lt;ul class="red"&gt;
-    &lt;li&gt;{{color.name}}&lt;/li&gt;
-    &lt;li&gt;{{color.shade}}&lt;/li&gt;
-    &lt;li&gt;{{color.code}}&lt;/li&gt;
+  &lt;li&gt;{{color.name}}&lt;/li&gt;
+  &lt;li&gt;{{color.shade}}&lt;/li&gt;
+  &lt;li&gt;{{color.code}}&lt;/li&gt;
 &lt;/ul&gt;
                         </code>
                     </pre>
@@ -329,9 +317,9 @@ var nameElem = element(by.binding('color.name'));
                     <pre>
                         <code class="html">
 &lt;div class="details"&gt;
-    &lt;div class="personal"&gt;
-        &lt;input ng-model="person.name"&gt;
-    &lt;/div&gt;
+  &lt;div class="personal"&gt;
+    &lt;input ng-model="person.name"&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
                         </code>
                     </pre>
@@ -350,9 +338,9 @@ var nameElem = element.all(by.css('.details'))
                     <pre>
                         <code class="html">
 &lt;div class="details"&gt;
-    &lt;div class="personal"&gt;
-        &lt;input ng-model="person.name"&gt;
-    &lt;/div&gt;
+  &lt;div class="personal"&gt;
+    &lt;input ng-model="person.name"&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
                         </code>
                     </pre>
@@ -365,53 +353,51 @@ var elem = element(by.model('person.name'));
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#7</h2>
-                    <p class="fragment">WHAT: Favor by.id, by.css and by.name locators when possible and when no protractor
-                        locators are available</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Access elements easier</li>
-                            <li>Select markup that is less likely to change</li>
-                            <li>More readable locators</li>
-                        </ul>
-                    </div>
-                </section>
+              <!--use id and css-->
+              <section>
+                <h3>Favor by.id and by.css when no protractor locators are available</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Access elements easier</li>
+                    <li>Select markup that is less likely to change</li>
+                    <li>More readable locators</li>
+                  </ul>
+                </div>
+              </section>
 
-                <section>
-                    <h2>#8</h2>
-                    <p class="fragment">WHAT: NEVER use xpath</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Markup is very easily subject to change</li>
-                            <li>Unreadable locator</li>
-                        </ul>
-                    </div>
-                </section>
+              <!--never use xpath-->
+              <section>
+                <h3>NEVER use xpath</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Markup is very easily subject to change</li>
+                    <li>Unreadable locator</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
                         <code class="javascript">
-/* avoid */
-// todo get more horrifying example
-var elem = element(by.xpath("/body/div[@id='menu']/div[@id='button']"));
+/* avoid, source: stackoverflow */
+var elem = element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[1]/div/div/div[3]/div[2]/div‌​[2]/div[1]/div[1]/h3"));
                         </code>
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#9</h2>
-                    <p class="fragment">WHAT: NEVER use xpath</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>xpath is known to have performance issues</li>
-                            <li>Unreadable locator</li>
-                        </ul>
-                    </div>
-                </section>
+              <!--never use xpath 2-->
+              <section>
+                <h3>NEVER use xpath</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>xpath is known to have performance issues</li>
+                    <li>Unreadable locator</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -422,18 +408,18 @@ var elem = element(by.xpath("/body/div[@id='menu']/div[@id='button']"));
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#10</h2>
-                    <p class="fragment">WHAT: Use Page Objects to interact with the page under test</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Encapsulate information about the elements on the page under test</li>
-                            <li>They can be reused across multiple tests</li>
-                            <li>Decouple the test logic from implementation details</li>
-                        </ul>
-                    </div>
-                </section>
+              <!--use page objects-->
+              <section>
+                <h3>Use Page Objects to interact with the view under test</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Encapsulate information about the elements on the page under test</li>
+                    <li>They can be reused across multiple tests</li>
+                    <li>Decouple the test logic from implementation details</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -441,15 +427,15 @@ var elem = element(by.xpath("/body/div[@id='menu']/div[@id='button']"));
 /* avoid */
 
 describe('Question page', function() {
-    it('should answer any question', function() {
-        var question = element(by.model('question.text'));
-        var answer = element(by.binding('answer'));
-        var button = element(by.css('.question-button'));
+  it('should answer any question', function() {
+    var question = element(by.model('question.text'));
+    var answer = element(by.binding('answer'));
+    var button = element(by.css('.question-button'));
 
-        question.sendKeys("What is the purpose of meaning?");
-        button.click();
-        expect(answer.getText()).toEqual("Chocolate!");
-    });
+    question.sendKeys("What is the purpose of meaning?");
+    button.click();
+    expect(answer.getText()).toEqual("Chocolate!");
+  });
 });
                         </code>
                     </pre>
@@ -462,14 +448,14 @@ describe('Question page', function() {
 
 /* question.page.js */
 var QuestionPage = function() {
-    this.question = element(by.model('question.text'));
-    this.answer = element(by.binding('answer'));
-    this.button = element(by.className('question-button'));
+  this.question = element(by.model('question.text'));
+  this.answer = element(by.binding('answer'));
+  this.button = element(by.className('question-button'));
 
-    this.ask = function(question) {
-        this.question.sendKeys(question);
-        this.button.click();
-    };
+  this.ask = function(question) {
+    this.question.sendKeys(question);
+    this.button.click();
+  };
 };
 
 module.exports = UserPropertiesPage;
@@ -486,28 +472,28 @@ module.exports = UserPropertiesPage;
 var Question = require('./question.page');
 
 describe('Question page', function() {
-    var question = new Question();
+  var question = new Question();
 
-    it('should ask any question', function() {
+  it('should ask any question', function() {
         question.ask('What is the purpose of meaning?');
         expect(question.answer.getText()).toEqual('Chocolate');
-    });
+  });
 });
                         </code>
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#11</h2>
-                    <p class="fragment">WHAT: Declare one Page Object per file</p>
-                    <p class="fragment">WHY: Keeps code clean and makes things easy to find</p>
-                </section>
+              <!--one page object per file-->
+              <section>
+                <h3>Declare one Page Object per file</h3>
+                <p class="fragment">WHY: Keeps code clean and makes things easy to find</p>
+              </section>
 
-                <section>
-                    <h2>#12</h2>
-                    <p class="fragment">WHAT: Use a single module.exports at the end of the Page Object file</p>
-                    <p class="fragment">WHY: One Page Object per file means there's only one class to export</p>
-                </section>
+              <!--single export-->
+              <section>
+                <h3>Use a single module.exports at the end of the Page Object file</h3>
+                <p class="fragment">WHY: One Page Object per file means there's only one class to export</p>
+              </section>
 
                 <section>
                     <pre>
@@ -537,11 +523,11 @@ module.exports = UserPropertiesPage;
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#13</h2>
-                    <p class="fragment">WHAT: Require all the modules at the top</p>
-                    <p class="fragment">WHY: The module dependencies should be clear and easy to find</p>
-                </section>
+              <!--require all modules at the top-->
+              <section>
+                <h3>Require all the modules at the top</h3>
+                <p class="fragment">WHY: The module dependencies should be clear and easy to find</p>
+              </section>
 
                 <section>
                     <pre>
@@ -560,17 +546,17 @@ describe('User properties page', function() {
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#14</h2>
-                    <p class="fragment">WHAT: Instantiate all Page Objects at the beginning of the test suite</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>Separates dependencies from the test code</li>
-                            <li>Makes the dependencies available to all specs of the suite</li>
-                        </ul>
-                    </div>
-                </section>
+              <!--create page object instances at the beginning-->
+              <section>
+                <h3>Instantiate all Page Objects at the beginning of the test suite</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Separates dependencies from the test code</li>
+                    <li>Makes the dependencies available to all specs of the suite</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre>
@@ -583,29 +569,29 @@ var MenuPage = require('./menu.page');
 var FooterPage = require('./footer.page');
 
 describe('User properties page', function() {
-    var user = new UserPage();
-    var menu = new MenuPage();
-    var footer = new FooterPage();
+  var user = new UserPage();
+  var menu = new MenuPage();
+  var footer = new FooterPage();
 
-    // specs
+  // specs
 });
                         </code>
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#15</h2>
-                    <p class="fragment">WHAT: Declare all the Page Object public elements in the constructor</p>
-                    <p class="fragment">WHY: The user of the Page Object should have quick access to the available elements on a page</p>
-                </section>
+              <!--public elements in constructor-->
+              <section>
+                <h3>Declare all the Page Object public elements in the constructor</h3>
+                <p class="fragment">WHY: The user of the Page Object should have quick access to the available elements on a page</p>
+              </section>
 
                 <section>
                     <pre>
                         <code class="html">
 &lt;form&gt;
-    Name: &lt;input type="text" ng-model="ctrl.user.name"&gt;
-    E-mail: &lt;input type="text" ng-model="ctrl.user.email"&gt;
-    &lt;button id="save-button"&gt;Save&lt;/button&gt;
+  Name: &lt;input type="text" ng-model="ctrl.user.name"&gt;
+  E-mail: &lt;input type="text" ng-model="ctrl.user.email"&gt;
+  &lt;button id="save-button"&gt;Save&lt;/button&gt;
 &lt;/form&gt;
                         </code>
                     </pre>
@@ -620,9 +606,9 @@ var email = element(by.model('ctrl.user.email'));
 var saveButton = element(by.id('#save-button'));
 
 var UserPropertiesPage = function() {
-    this.save = function() {
-        ...
-    };
+  this.save = function() {
+    ...
+  };
 };
                         </code>
                     </pre>
@@ -632,9 +618,9 @@ var UserPropertiesPage = function() {
                     <pre>
                         <code class="html">
 &lt;form&gt;
-    Name: &lt;input type="text" ng-model="ctrl.user.name"&gt;
-    E-mail: &lt;input type="text" ng-model="ctrl.user.email"&gt;
-    &lt;button id="save-button"&gt;Save&lt;/button&gt;
+  Name: &lt;input type="text" ng-model="ctrl.user.name"&gt;
+  E-mail: &lt;input type="text" ng-model="ctrl.user.email"&gt;
+  &lt;button id="save-button"&gt;Save&lt;/button&gt;
 &lt;/form&gt;
                         </code>
                     </pre>
@@ -645,29 +631,29 @@ var UserPropertiesPage = function() {
 
 /* user-properties.page.js */
 var UserPropertiesPage = function() {
-    this.name = element(by.model('ctrl.user.name'));
-    this.email = element(by.model('ctrl.user.email'));
-    this.saveButton = element(by.id('#save-button'));
+  this.name = element(by.model('ctrl.user.name'));
+  this.email = element(by.model('ctrl.user.email'));
+  this.saveButton = element(by.id('#save-button'));
 
-    this.save = function() {
-        ...
-    };
+  this.save = function() {
+    ...
+  };
 };
                         </code>
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#16</h2>
-                    <p class="fragment">WHAT: Declare Page Object functions for operations that require more that one step</p>
-                    <div class="fragment">
-                        <span>WHY:</span> 
-                        <ul>
-                            <li>Most elements are already exposed by the Page Object and can be used directly in the test</li>
-                            <li>Doing otherwise will not have any added value</li>
-                        </ul>
-                    </div>
-                </section>
+              <!-- page object functions -->
+              <section>
+                <h3>Declare Page Object functions for operations that require more that one step</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>Most elements are already exposed by the Page Object and can be used directly in the test</li>
+                    <li>Doing otherwise will not have any added value</li>
+                  </ul>
+                </div>
+              </section>
 
                 <section>
                     <pre style="height: 320px;">
@@ -676,12 +662,12 @@ var UserPropertiesPage = function() {
 
 /* user-properties.page.js */
 var UserPropertiesPage = function() {
-    this.name = element(by.model('ctrl.user.name'));
-    this.saveButton = element(by.id('#save-button'));
+  this.name = element(by.model('ctrl.user.name'));
+  this.saveButton = element(by.id('save-button'));
 
-    this.enterName = function(name) {
-        this.name.sendKeys(name);
-    };
+  this.enterName = function(name) {
+    this.name.sendKeys(name);
+  };
 };
                         </code>
                     </pre>
@@ -692,12 +678,12 @@ var UserPropertiesPage = function() {
 var UserPage = require('./user-properties.page');
 
 describe('User properties page', function() {
-    var user = new UserPage();
+  var user = new UserPage();
 
-    it('should enable the save button when a user name is entered', function() {
-        user.enterName('TeddyB');
-        expect(user.saveButton.isEnabled()).toBeTruthy();
-    });
+  it('should enable save button when user name entered', function() {
+    user.enterName('TeddyB');
+    expect(user.saveButton.isEnabled()).toBe(true);
+  });
 });
                         </code>
                     </pre>
@@ -710,8 +696,8 @@ describe('User properties page', function() {
 
 /* user-properties.page.js */
 var UserPropertiesPage = function() {
-    this.name = element(by.model('ctrl.user.name'));
-    this.saveButton = element(by.id('#save-button'));
+  this.name = element(by.model('ctrl.user.name'));
+  this.saveButton = element(by.id('save-button'));
 };
                         </code>
                     </pre>
@@ -722,55 +708,96 @@ var UserPropertiesPage = function() {
 var UserPage = require('./user-properties.page');
 
 describe('User properties page', function() {
-    var user = new UserPage();
+  var user = new UserPage();
 
-    it('should enable the save button when a user name is entered', function() {
-        user.name.sendKeys('TeddyB');
-        expect(user.saveButton.isEnabled()).toBeTruthy();
-    });
+  it('should enable save button when user name entered', function() {
+    user.name.sendKeys('TeddyB');
+    expect(user.saveButton.isEnabled()).toBe(true);
+  });
 });
                         </code>
                     </pre>
                 </section>
 
-                <section>
-                    <h2>#17</h2>
-                    <p class="fragment">WHAT: Don't make any assertions in your Page Objects</p>
-                    <div class="fragment">
-                        <span>WHY:</span>
-                        <ul>
-                            <li>It is the responsibility of the test to do all the assertions</li>
-                            <li>A reader of the test should be able to understand the behavior of the application by
-                                looking at the test only</li>
-                        </ul>
-                    </div>
-                </section>
+              <!-- no assertions in page objects -->
+              <section>
+                <h3>Don't make any assertions in your Page Objects</h3>
+                <div class="fragment">
+                  <span>WHY:</span>
+                  <ul>
+                    <li>It is the responsibility of the test to do all the assertions</li>
+                    <li>A reader of the test should be able to understand the behavior of the application by
+                      looking at the test only
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- mini page objects -->
+              <section>
+                <h3>Add Page Object wrappers for directives, dialogs, and common elements</h3>
+                <div class="fragment">
+                  <span>WHY</span>
+                  <ul>
+                    <li>You can use them in multiple tests</li>
+                    <li>Avoid code duplication</li>
+                    <li>When the directive changes you only need to change the wrapper once</li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- avoid text locators -->
+              <section>
+                <h3>Avoid text locators for text that changes frequently</h3>
+                <div class="fragment">
+                  <span>WHY</span>
+                  <ul>
+                    <li>Text for buttons, links, and labels tends to change over time</li>
+                    <li>Your tests should not break when you make minor text changes</li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- TEST SUITES -->
+              <!-- TEST SUITES -->
+              <!-- TEST SUITES -->
+              <!-- TEST SUITES -->
+              <!-- TEST SUITES -->
+
+              <section>
+                <h1>Test suites</h1>
+              </section>
+
+              <!--use jasmine 2-->
+              <section>
+                <h2>Use Jasmine 2</h2>
+                <div class="fragment">
+                  <span>WHY</span>
+                  <ul>
+                    <li>You can use <strong>beforeAll</strong> and
+                      <strong>afterAll</strong></li>
+                    <li>You can filter tests by name</li>
+                  </ul>
+                </div>
+              </section>
+
+              <!--make your suites independent-->
+              <section>
+                <h3>Make your tests independent at least at the file level</h3>
+                <div class="fragment">
+                  <span>WHY</span>
+                  <ul>
+                    <li>You can run tests in parallel with sharding</li>
+                    <li>The execution order is not guaranteed</li>
+                    <li>You can run suites in isolation</li>
+                  </ul>
+                </div>
+              </section>
             </div>
         </div>
 
 
         <!-- reveal.js initialization -->
-        <script>
-            Reveal.initialize({
-                controls: false,
-                progress: true,
-                history: true,
-                center: true,
-                transition: 'fade', // none/fade/slide/convex/concave/zoom
-                // Optional reveal.js plugins
-                dependencies: [{
-                    src: 'lib/js/classList.js',
-                    condition: function() { return !document.body.classList; }
-                },{
-                    src: 'node_modules/reveal.js/plugin/highlight/highlight.js',
-                    async: true,
-                    condition: function() { return !!document.querySelector( 'pre code' ); },
-                    callback: function() { hljs.initHighlightingOnLoad(); }
-                }
-                    //{ src: 'plugin/zoom-js/zoom.js', async: true },
-                    //{ src: 'plugin/notes/notes.js', async: true }
-                ]
-            });
-        </script>
+        <script src="reveal-config.js"></script>
     </body>
 </html>

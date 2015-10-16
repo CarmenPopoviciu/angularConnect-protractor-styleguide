@@ -28,6 +28,11 @@
     margin-bottom: 50px;
 }
 
+.reveal h3 {
+    color: #B52E31;
+    margin-bottom: 50px;
+}
+
 .reveal .slides .title h1 {
     font-size: 2.8em;
     margin-bottom: 140px;
@@ -51,4 +56,8 @@
     width: 3em;
     border-radius: 1.5em;
     margin: 0;
+}
+
+pre code.javascript {
+  overflow-wrap: break-word;
 }
