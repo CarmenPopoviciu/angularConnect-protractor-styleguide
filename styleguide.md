@@ -8,7 +8,6 @@ to update the Page Object.
 ### Declare one page object per file
 
 * Each page object should be defined in its own file.
-
 * Why? Keeps code clean and makes things easy to find.
 
 ### Use a single module.exports at the end of the page object file
@@ -135,8 +134,7 @@ var UserPropertiesPage = function() {
 
 ### Avoid using expect() in page objects
 
-* Don't make any assertions in your Page Objects
-
+* Don't make any assertions in your Page Objects.
 * Why? It is the responsibility of the test to do all the assertions.
 * Why? A reader of the test should be able to understand the behavior of the
   application by looking at the test only
