@@ -58,6 +58,11 @@
     margin: 0;
 }
 
+.reveal .slides .avatar-full {
+    width: 72%;
+    margin: 0px;
+}
+
 pre code.javascript {
   overflow-wrap: break-word;
 }
