@@ -254,7 +254,10 @@ var personName = element(by.model('person.name'));
 
 ### Use Jasmine 2
 
-* TODO: (you can use beforeAll)
+* Use the latest version of Jasmine
+
+* Why? You can use `beforeAll` and `afterAll`.
+* Why? You can filter tests by name.
 
 ### Make your tests independent at least at the file level
 
@@ -262,3 +265,8 @@ var personName = element(by.model('person.name'));
   are executed across different browsers as they become available.
 * Make your tests independent at the file level because the order in which
   they run is not guaranteed and it's easier to run a test in isolation.
+
+### Do not add logic to your test
+
+* Avoid using if statements and for loops. When you add logic your test may
+  pass without testing anything, or may run very slowly.
