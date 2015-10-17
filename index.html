@@ -110,12 +110,32 @@
               </section>
 
               <!-- RULES -->
-              <section>
+              <section class="rules">
                 <h2>Protractor Styleguide</h2>
+                <p class="fragment">A set of rules and best practices for writing e2e tests with Protractor</p>
               </section>
 
               <section>
-                <h1>Our rules</h1>
+                <h2>Protractor Styleguide</h2>
+                <ul class="no-bullet">
+                  <li>Generic rules</li>
+                  <li class="fragment">Project structure</li>
+                  <li class="fragment">Locator strategies</li>
+                  <li class="fragment">Page Objects</li>
+                  <li class="fragment">Test suites</li>
+                </ul>
+              </section>
+
+              <!-- RULES-GENERIC -->
+              <section>
+                <h2>Protractor Styleguide</h2>
+                <ul class="no-bullet active">
+                  <li class="current">Generic rules</li>
+                  <li>Project structure</li>
+                  <li>Locator strategies</li>
+                  <li>Page Objects</li>
+                  <li>Test suites</li>
+                </ul>
               </section>
 
               <!--don't cheat-->
@@ -140,6 +160,18 @@
               <section>
                 <h3>Don't e2e test what you already unit tested</h3>
                 <p>WHY: Avoid duplicate tests</p>
+              </section>
+
+              <!-- RULES-PROJECT-STRUCTURE -->
+              <section>
+                  <h2>Protractor Styleguide</h2>
+                  <ul class="no-bullet active">
+                      <li>Generic rules</li>
+                      <li class="current">Project structure</li>
+                      <li>Locator strategies</li>
+                      <li>Page Objects</li>
+                      <li>Test suites</li>
+                  </ul>
               </section>
 
               <!--put all thests in a folder-->
@@ -310,6 +342,18 @@ e2e.dev: {
                     </pre>
                 </section>
 
+              <!-- RULES-LOCATOR-STRATEGIES -->
+              <section>
+                <h2>Protractor Styleguide</h2>
+                <ul class="no-bullet active">
+                  <li>Generic rules</li>
+                  <li>Project structure</li>
+                  <li class="current">Locator strategies</li>
+                  <li>Page Objects</li>
+                  <li>Test suites</li>
+                </ul>
+              </section>
+
               <!--use protractor locators-->
               <section>
                 <h3>Favor protractor locators when possible</h3>
@@ -414,6 +458,18 @@ var elem = element(by.model('person.name'));
                 </div>
               </section>
 
+              <!-- avoid text locators -->
+              <section>
+                <h3>Avoid text locators for text that changes frequently</h3>
+                <div class="fragment">
+                  <p>WHY</p>
+                  <ul>
+                    <li>Text for buttons, links, and labels tends to change over time</li>
+                    <li>Your tests should not break when you make minor text changes</li>
+                  </ul>
+                </div>
+              </section>
+
               <!--never use xpath-->
               <section>
                 <h3>NEVER use xpath</h3>
@@ -455,6 +511,18 @@ var elem = element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[
                         </code>
                     </pre>
                 </section>
+
+              <!-- RULES-PAGE-OBJECTS -->
+              <section>
+                <h2>Protractor Styleguide</h2>
+                <ul class="no-bullet active">
+                  <li>Generic rules</li>
+                  <li>Project structure</li>
+                  <li>Locator strategies</li>
+                  <li class="current">Page Objects</li>
+                  <li>Test suites</li>
+                </ul>
+              </section>
 
               <!--use page objects-->
               <section>
@@ -809,26 +877,16 @@ describe('User properties page', function() {
                 </div>
               </section>
 
-              <!-- avoid text locators -->
+              <!-- RULES-TEST-SUITES -->
               <section>
-                <h3>Avoid text locators for text that changes frequently</h3>
-                <div class="fragment">
-                  <p>WHY</p>
-                  <ul>
-                    <li>Text for buttons, links, and labels tends to change over time</li>
-                    <li>Your tests should not break when you make minor text changes</li>
-                  </ul>
-                </div>
-              </section>
-
-              <!-- TEST SUITES -->
-              <!-- TEST SUITES -->
-              <!-- TEST SUITES -->
-              <!-- TEST SUITES -->
-              <!-- TEST SUITES -->
-
-              <section>
-                <h1>Test suites</h1>
+                <h2>Protractor Styleguide</h2>
+                <ul class="no-bullet active">
+                  <li>Generic rules</li>
+                  <li>Project structure</li>
+                  <li>Locator strategies</li>
+                  <li>Page Objects</li>
+                  <li class="current">Test suites</li>
+                </ul>
               </section>
 
               <!--use jasmine 2-->

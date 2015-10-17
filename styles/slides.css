@@ -63,6 +63,31 @@
     margin: 0px;
 }
 
+.reveal .slides .rules h2 {
+    position: absolute;
+    top: -89%;
+    left: 12.5%;
+}
+
+.reveal .slides ul.no-bullet {
+    list-style: none;
+}
+
+.reveal .slides ul.no-bullet li {
+    font-size: 1.2em;
+    padding: 2px;
+}
+
+.reveal .slides ul.no-bullet.active li {
+    color: #bbbbbb;
+}
+
+.reveal .slides ul.no-bullet li.current {
+    font-weight: bold;
+    color: black;
+    list-style: disc;
+}
+
 pre code.javascript {
   overflow-wrap: break-word;
 }
